@@ -1,7 +1,10 @@
+import { AppRouter } from './router'
+
 export function App() {
-    return (
-      <div>
-        HOME
-      </div>
+  return (
+    <div>
+      HOME
+      <AppRouter />
+    </div>
   )
 }
