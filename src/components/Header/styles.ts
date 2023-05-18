@@ -2,6 +2,7 @@ import { styled } from '../../styles'
 
 export const HeaderContainer = styled('header', {
   width: '100%',
+  marginBottom: '8px',
   padding: '4px 18px',
   display: 'flex',
   justifyContent: 'space-between',
