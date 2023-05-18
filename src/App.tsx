@@ -1,6 +1,7 @@
-import { warn } from 'console'
 import { AuthProvider } from './contexts/AuthContext'
+import { SideMenuProvider } from './contexts/SideMenuContext'
 import { AppRouter } from './router'
+
 import { globalCss } from './styles'
 
 const css = globalCss({
@@ -25,7 +26,9 @@ export function App() {
 
   return (
     <AuthProvider>
-      <AppRouter />
+      <SideMenuProvider>
+        <AppRouter />
+      </SideMenuProvider>
     </AuthProvider>
   )
 }

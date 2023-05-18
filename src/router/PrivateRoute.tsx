@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
+
 import { Header } from '../components/Header'
+import { SideMenu } from '../components/SideMenu'
 
 type TProtected = {
   isSignedIn: boolean,
@@ -12,6 +14,7 @@ export function PrivateRoute(props: any) {
     <>
       <Header />
       <Outlet />
+      <SideMenu />
     </>
   ) :
     <Navigate to="/" replace />
