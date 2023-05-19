@@ -20,35 +20,58 @@ export const Overlay = styled('div', {
 
 export const SideMenuContainer = styled('div', {
   zIndex: 2,
-  position: 'relative',
+  position: 'fixed',
   width: '50%',
+  maxWidth: '300px',
   height: '100%',
-  padding: '46px',
+  padding: '15px 6px 0 24px',
   display: 'flex',
   flexDirection: 'column',
+  justifyContent: 'flex-start',
   alignItems: 'flex-start',
+  gap: '25px',
   backgroundColor: '$black500',
+})
+
+export const SideMenuHeaderContainer = styled('div', {
+  width: '100%',
+  marginBottom: '27px',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'flex-start'
 })
 
 export const Logo = styled('img', {
   width: '62px',
-  height: '62px'
+  height: '62px',
 })
 
 export const CloseButton = styled(X, {
-  position: 'absolute',
-  top: '15px',
-  right: '6px',
   fontSize: 32,
-  color: '$white300'
+  color: '$white300',
+  cursor: 'pointer',
+  transition: '0.2s color ease',
+  '&:hover': {
+    color: '$red300'
+  }
 })
 
-export const SideMenuItem = styled('div', {
+export const SideMenuItem = styled('button', {
   width: '100%',
+  paddingLeft: '15px',
+  paddingRight: '13px',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  backgroundColor: 'transparent',
   color: '$white300',
-  fontWeight: 400,
-  fontSize: '24px'
+  border: 'none',
+  transition: '0.2s ease',
+  '& h4': {
+    fontSize: '24px',
+    fontWeight: 400,
+  },
+  '&:hover': {
+    color: '$yellow500'
+  }
 })

@@ -3,6 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 import { Header } from '../components/Header'
 import { SideMenu } from '../components/SideMenu'
+import { Container } from '../components/Container'
 
 type TProtected = {
   isSignedIn: boolean,
@@ -13,7 +14,9 @@ export function PrivateRoute(props: any) {
   return !!props.isSignedIn ? (
     <>
       <Header />
-      <Outlet />
+      <Container>
+        <Outlet />
+      </Container>
       <SideMenu />
     </>
   ) :

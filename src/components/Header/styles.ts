@@ -9,9 +9,12 @@ export const HeaderContainer = styled('header', {
   alignItems: 'center',
   backgroundColor: '$black300',
   color: '$white300',
-  '& .button': {
+  '& button': {
     cursor: 'pointer',
     transition: '0.2s ease',
+    backgroundColor: 'transparent',
+    border: 'none',
+    color: '$white300',
     '&:hover' : {
       filter: 'brightness(0.9)'
     }
