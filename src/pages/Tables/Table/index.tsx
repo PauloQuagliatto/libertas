@@ -1,7 +1,18 @@
+import { GridContainer } from '../../../components/GridContainer'
+import { PageHeader } from '../../../components/PageHeader'
+import { PlusButton } from '../../../components/PlusButton'
+
+import { ProductContainer } from './styles'
+
 export function Table() {
   return (
-    <div>
-      <h1>Table</h1>
-    </div>
+    <>
+      <PageHeader>
+        <h1>R$ 55,00</h1>
+        <PlusButton onClickFunction={() => { return }} />
+      </PageHeader>
+      <GridContainer>
+      </GridContainer>
+    </>
   )
 }

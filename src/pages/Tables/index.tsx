@@ -1,29 +1,21 @@
-import { Plus } from 'phosphor-react'
-
+import { GridContainer } from '../../components/GridContainer'
+import { PageHeader } from '../../components/PageHeader'
+import { PlusButton } from '../../components/PlusButton'
 import { TableButton } from '../../components/TableButton'
-
-import {
-  TablesContainer,
-  TablesGrid,
-  TablesHeader,
-  PlusButton
-} from './styles'
 
 export function Tables() {
   return (
-    <TablesContainer>
-      <TablesHeader>
+    <>
+      <PageHeader>
         <h1>Tables</h1>
-        <PlusButton>
-          <Plus size={32} />
-        </PlusButton>
-      </TablesHeader>
-      <TablesGrid>
+        <PlusButton onClickFunction={() => { return }} />
+      </PageHeader>
+      <GridContainer>
         <TableButton id={'1'} tableOwner={'Xuxu'} />
         <TableButton id={'2'} tableOwner={'Paulo'} />
         <TableButton id={'3'} tableOwner={'Malu'} />
         <TableButton id={'4'} tableOwner={'Jess'} />
-      </TablesGrid>
-    </TablesContainer>
+      </GridContainer>
+    </>
   )
 }

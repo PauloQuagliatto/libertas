@@ -12,5 +12,9 @@ export const TableButtonContainer = styled('button', {
   borderRadius: '9999px',
   '& h4': {
     color: '$black500'
+  },
+  transition: '0.2s ease',
+  '&:hover': {
+    filter: 'brightness(0.9)'
   }
 })
